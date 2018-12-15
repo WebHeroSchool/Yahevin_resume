@@ -1,0 +1,32 @@
+{
+  "name": "yahevin_resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebHeroSchool/Yahevin_resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebHeroSchool/Yahevin_resume/issues"
+  },
+  "homepage": "https://github.com/WebHeroSchool/Yahevin_resume#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "postcss-assets": "^5.0.0",
+    "postcss-nested": "^4.1.0",
+    "postcss-preset-env": "^6.4.0"
+  },
+  "dependencies": {
+    "gulp-rename": "^1.4.0",
+    "postcss-short": "^5.0.0"
+  }
+}
