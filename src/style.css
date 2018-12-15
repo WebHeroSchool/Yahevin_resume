@@ -1,0 +1,328 @@
+body {
+	width: 100%;
+	margin: 0;
+	position: relative;
+	height: 100%;
+	overflow-x: hidden;
+}
+.sideMenu {
+	position: relative;	
+	&__burger {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		position: absolute;
+		background-color: #83838E;
+		top:0;
+		right: 20px;
+		transition: background-color 0.4s ease-out 0.1s;
+		&:hover {
+			background-color: black;
+		}
+	}
+	&__sideBar {
+		position: absolute;
+		top: 0;
+		right: -280px;
+		width: 280px;
+		height: 1000px;
+		opacity: 0.1;
+		background-color: grey;
+	}
+	&__burger_snippet {
+		width: 25px;
+		height: 3.5px;
+		left: 12.5px;
+		position: absolute;
+		z-index: 20;
+		background-color: white;
+		transition: 0.5s ease 0s;
+	}
+}
+.snippet1 {
+	top: 22.5px;	
+}
+.snippet2 {
+	top: 16.5px;
+}
+.snippet3 {
+	top: 28.5px;
+}
+.taped1 {
+	opacity: 0; 
+}
+.taped2 {
+	backface-visibility: hidden;
+  	transform: rotate(-410deg);
+  	transition: 0.55s 0.1s;
+  	top:22.5px;
+  	width: 30px;
+  	left: 10px;
+}
+.taped3 {
+	backface-visibility: hidden;
+  	transform: rotate(50deg);
+  	transition: 0.55s 0.1s;
+  	top:22.5px;
+  	width: 30px;
+  	left: 10px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	font-family: MontserratMedium;
+	margin: 40px 0 70px 0;
+	&__RA {
+		color: #83838E;
+		font-size: 1.8vw;
+	}
+	&__buttons {
+		width: 40%;
+		display: flex;
+		justify-content: space-between;
+		font-size: 1vw;
+		color: #ADADB9;
+		&_nav {
+			display: flex;
+			justify-content: space-around;
+			width: 70%;			
+		}
+		&_lang {
+			color: #0094FF;
+		}
+		&_item {
+			text-decoration: none;
+			&:visited {
+				color: #ADADB9;
+			}
+			&:link {
+				color: #ADADB9;
+			}
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+.content {
+	width: 70%;
+	min-width: 801px;
+	margin: 0 19vw 0 auto;
+}
+
+.myInfo__mainBox {
+	font-family: MontserratBold;
+	font-size: 4vw;
+	margin: 0 0 55px 0;
+	&_img {
+		display: inline-block;
+		background-image: url('I.png');
+		width: 200px;
+		height: 200px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&_text {
+		display: inline-block;
+	}
+	&_name {
+		display: block;
+		color: #83838E;
+	}
+	&_surname {
+		display: block;
+		color: #FFC700;
+	}
+	&_point {
+		color: #83838E;
+	}
+}
+
+
+.myInfo {
+	font-family: MontserratRegular;
+	width: 100%;
+	margin: 0 0 170px 0;
+	&__hi {
+		margin: 0 0 34px 0;
+		font-size: 1.9vw;
+		display: block;
+		width: 80%;
+	}
+	&__text{
+		display: block;
+		margin: 0 0 20px 0;
+		font-size: 1.4vw;
+	}
+	&__triangle {
+	}
+}
+
+
+.works {
+	margin: 0 0 229px 0;
+	width: 85%;
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 30px 0;
+		&_left {
+			color: #0094FF;
+			display: block;
+			font-family: MontserratSemiBold;
+			font-size: 1.8vw;
+		}
+		&_right {
+			font-family: MontserratRegular;
+			font-size: 1vw;
+			color: #ADADB9;
+		}
+	}
+	&__img {
+		display: flex;
+		justify-content: space-between;
+		max-height: 16vw;
+		&_left {
+		    background-image: url(imgs/Tesla.png);    
+		}
+		&_right {
+		    background-image: url(imgs/Game.png);
+		    background-color: green;
+		}
+	}
+}
+.recentImg {
+	width: 48%;
+	height: 16vw;
+	min-height: 183px;
+	display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 11px -3px black;
+}
+
+.skills {	
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	&__stickyBox {
+		display: inline-block;
+		position: relative;
+		width: 45%;
+	}
+	&__itemBox {
+		display: inline-block;
+		width: 45%;
+	}
+	&__item {
+		display: block;
+		font-family: MontserratRegular;
+		font-size: 1.4vw;
+		&_title {
+			display: block;
+			margin: 0 0 15px 0;
+			color: #83838E;
+			font-family: MontserratMedium;
+		}
+		&_text {
+			display: block;
+			margin: 0 0 47px 0;
+
+		}
+		&_number {
+			color: #FFC700;
+		}
+	}
+}
+
+	
+.sticky {
+	top: 200px;
+	position: sticky;
+	width: 100%;
+	height: 120px;
+	font-family: MontserratRegular;
+	&_title {
+		color: #0094FF;
+		display: block;
+		font-family: MontserratSemiBold;
+		font-size: 1.8vw;
+	}
+	&_text {
+		display: block;
+		font-size: 2vw;
+	}
+}
+
+
+
+.repository {
+	margin: 207px 0 0 0;
+	&__stickyBox {
+		display: inline-block;
+		position: relative;
+		width: 45%;
+	}
+}
+
+.hire {
+	margin: 193px 0 0 0;
+	font-size: 1.8vw;
+	font-family: MontserratRegular;
+	&__tittle {
+		color: #0094FF;
+		display: block;
+	}
+	&__text1 {
+		margin: 16px 0 0 0;
+		display: block;
+		
+	}
+	&__text2 {
+		margin: 20px 0 0 0;
+		display: block;
+
+	}
+	&__mail {
+		margin: 40px 0 0 0;
+		display: block;
+	}
+}
+
+
+.footer {
+	padding: 130px 0 60px 0;
+	margin: 180px 0 0 0;
+	display: flex;
+	justify-content: space-around;
+	background-color: #2F2F38;
+	font-family: MontserratRegular;
+	&__me {
+		width: 30%;
+		&_title {
+			display: block;
+			color: #DFDFE6;
+		}
+		&_text {
+			display: block;
+			 color: #ADADB9;
+		}
+	}
+	&__menu {
+		display: block;
+		color: #DFDFE6;
+		&_item {
+			display: block;
+			color: #ADADB9;
+		}
+	}
+	&__contact {
+		display: block;
+		color: #DFDFE6;
+		&_item {
+			display: block;
+		}
+	}
+}
+
