@@ -5,19 +5,38 @@
 	<title>WebHero2018</title>
 	<link rel="stylesheet" href="build/css/style.css">
 	<link rel="stylesheet" href="fonts.css">
+	<link rel="stylesheet" href="slide.css">
 </head>
 <body>
+	<section class="slideMenu">
+	<nav id="menu">
+      <h2>Menu</h2>
+    </nav>
+
+    <main id="panel">
+      <header>
+        <button class="toggle-button">☰</button>
+        <h2>Panel</h2>
+      </header>
+    </main>
+	</section>
 	<section class="sideMenu">
-			<div class="sideMenu__burger" id="sideMenu__burger">
-				<div class='sideMenu__burger_snippet snippet1' id='sideMenu__burger_snippet1'></div>
-				<div class='sideMenu__burger_snippet snippet2' id='sideMenu__burger_snippet2'></div>
-				<div class='sideMenu__burger_snippet snippet3' id='sideMenu__burger_snippet3'></div>
-			</div>
+		<div class="sideMenu__pageBlock" id="sideMenu__page"> 
+			<span class="sideMenu__pageBlock_number" id="sideMenu__pageBlock">1 </span>
+			 of 
+			<span class="sideMenu__pageBlock_number"> 4</span> 
+		</div>
+			
+		<div class="sideMenu__burger" id="sideMenu__burger">
+			<div class='sideMenu__burger_snippet snippet1' id='sideMenu__burger_snippet1'></div>
+			<div class='sideMenu__burger_snippet snippet2' id='sideMenu__burger_snippet2'></div>
+			<div class='sideMenu__burger_snippet snippet3' id='sideMenu__burger_snippet3'></div>
+		</div>
 		<section class="sideMenu__sideBar" id="sideMenu__sideBar">
 		</section>
 	</section>
 	<section class="content">
-		<header class = 'header'>
+		<header class = "header" id="header">
 			<article class="header__RA">
 				//RA.
 			</article>
@@ -46,7 +65,7 @@
 				</div>
 			</div>
 			<span class="myInfo__hi">
-				Hey, I'm a junior frontend-developer from Kazan, Russia.<br>
+				Hey, I'm a <span class="myInfo__blueText_underlineFree">junior frontend-developer</span> from Kazan, Russia.<br>
 				I can help you build your next product.
 			</span>
 			<span class="myInfo__text">
@@ -56,10 +75,10 @@
 				Have a project you'd like to discuss? 
 			</span>
 			<span class="myInfo__text">
-				Let's chat Yahevin15@gmail.com
+				Let's chat <span class="myInfo__blueText">Yahevin15@gmail.com</span>
 			</span>
 			<span class="myInfo__text">
-				or call me +7 (917) 916-28-74
+				or call me <span class="myInfo__blueText">+7 (917) 916-28-74</span>
 			</span>			
 			<div class="myInfo__triangle">			
 			</div>
@@ -73,12 +92,30 @@
 					View all
 				</span>
 			</section>
-			<section class="works__img">
-				<div class="works__img_left recentImg">	
-				</div>
-				<div class="works__img_right recentImg">	
-				</div>
-			</section>
+			<article class="works__imgBox">
+				<section class="works__img">
+					<div class="works__img_left recentImg"></div>
+					<div class="works__img_right recentImg"></div>
+				</section>
+				<section class="works__landing">
+					<div class="works__landing_left recentImg works__landing_item">
+						<span class="works__landing_tittle">
+							Tesla Landing Page
+						</span>
+						<span class="works__landing_text">
+							Не знаю зачем оно здесь
+						</span>
+					</div>
+					<div class="works__landing_right recentImg works__landing_item">
+						<span class="works__landing_tittle">
+							Catch the Mouse Game
+						</span>
+						<span class="works__landing_text">
+							Не знаю зачем оно здесь
+						</span>						
+					</div>
+				</section>
+			</article>
 		</article>
 		<article class="skills" id="skills">
 			<section class="skills__stickyBox">
@@ -144,11 +181,14 @@
 					</span>
 				</section>
 			</section>
-			<section class="repository__item">
-				<!--пагинация-->
+			<section class="repository__box">
+				<article class="repository__box_preloader"></article>
+				<article class="repository__box_item" id="repository__box_item"></article>
+				<nav class="repository__box_nav" id="repository__box_nav">
+				</nav>
 			</section>
 		</article>
-		<article class="hire">
+		<article class="hire" id="hire">
 			<span class="hire__tittle">
 				Hire me
 			</span>
@@ -177,21 +217,21 @@
 			<span class="footer__menu_title">
 				Menu
 			</span>
-			<span class="footer__menu_item">
+			<span class="footer__menu_item" id="about__button">
 				About
 			</span>
-			<span class="footer__menu_item">
+			<span class="footer__menu_item" id="works__button2">
 				Works
 			</span>
-			<span class="footer__menu_item">
+			<span class="footer__menu_item" id="skills__button2">
 				Skills
 			</span>
-			<span class="footer__menu_item">
+			<span class="footer__menu_item" id="repository__button2">
 				Git Repository
 			</span>
 		</nav>
 		<section class="footer__contact">
-			<span class="footer__contact_item">
+			<span class="footer__contact_title">
 				Contact
 			</span>
 			<span class="footer__contact_item">
@@ -200,15 +240,32 @@
 			<span class="footer__contact_item">
 				+7 (917) 916-28-74
 			</span>
-			<nav class="footer__contact_socNets">
-				<a href="" class="footer__contact_twitter"></a>
-				<a href="" class="footer__contact_facebook"></a>
-				<a href="" class="footer__contact_vk"></a>
-				<a href="" class="footer__contact_gitHub"></a>
-				<a href="" class="footer__contact_instagram"></a>
+			<nav class="footer__socNets">
+				<a href="https://vk.com/drunken_hunter" class="footer__socNets_item">
+					<div class="footer__socNets_vk"></div>
+				</a>
+				<a href="https://github.com/Yahevin" class="footer__socNets_item">
+					<div class="footer__socNets_gitHub"></div>
+				</a>
+				<a href="" class="footer__socNets_item">
+					<div class="footer__socNets_in"></div>
+				</a>
 			</nav>
 		</section>				
 	</footer>
 	<script type="text/javascript" src="scrypt.js"></script>
+	<script type="text/javascript" src="octokit-rest.min.js"></script>
+	<script src="slideout.min.js"></script>
+<script>
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    // 'side': 'right'
+  });
+
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+    slideout.toggle();
+  });
+</script>
 </body>
 </html>
