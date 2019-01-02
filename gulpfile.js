@@ -9,7 +9,7 @@ const octokit = require('@octokit/rest')()
 const nested = require('postcss-nested');
 const assets = require('postcss-assets');
 const cssnano = require('gulp-cssnano');
-var uglify = require('gulp-uglify-es').default;
+const uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
 const glob = require('glob');
 
@@ -18,7 +18,7 @@ const glob = require('glob');
 
 const path = {
 	src: {
-		dir: 'src',
+		dir: 'src/*.html',
 		script: 'src/*.js',
 		style: 'src/*.css',
 		images: 'src/imgs/*',
@@ -71,6 +71,10 @@ gulp.task('buildFonts', () => {
 	return gulp.src([path.src.fonts])
 		.pipe(gulp.dest(path.buildFolder.fonts))
 });
+gulp.task('buildHtml', () => {
+	return gulp.src([path.src.dir])
+		.pipe(gulp.dest(path.buildFolder.dir))
+});
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -78,10 +82,9 @@ gulp.task('browser-sync', function() {
             baseDir: "./build"
         }
     });
-	gulp.watch(path.src.style, ['buildCss-watch']);
-		
+	gulp.watch(path.src.style, ['buildCss-watch']);		
 });
 
 gulp.task('buildCss-watch', ['buildCss'], () => browserSync.reload());
 gulp.task('dev', ['buildCss','browser-sync']);
-gulp.task('prod', ['buildCss','buildJs','buildImgs','buildFonts']);
+gulp.task('prod', ['buildCss','buildJs','buildImgs','buildFonts','buildHtml']);
