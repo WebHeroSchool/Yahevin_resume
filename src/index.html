@@ -2,37 +2,97 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:title" content="Ramazan Abdullin" />
+	<meta property="og:description" 
+  		content="Hey, I'm a junior frontend-developer</span> from Kazan, Russia.
+  		I can help you build your next product.." />
+	<meta property="og:url" content="https://yahevin.github.io/Resume" />
+	<meta property="og:image" content="https://yahevin.github.io/Resume/imgs/I.png" />
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+
 	<title>WebHero2018</title>
-	<link rel="stylesheet" href="build/css/style.css">
-	<link rel="stylesheet" href="fonts.css">
-	<link rel="stylesheet" href="slide.css">
+	<link rel="stylesheet" href="css/index.min.css">
+
 </head>
 <body>
-	<section class="slideMenu">
-	<nav id="menu">
-      <h2>Menu</h2>
-    </nav>
-
-    <main id="panel">
-      <header>
-        <button class="toggle-button">☰</button>
-        <h2>Panel</h2>
-      </header>
-    </main>
-	</section>
+	<article class="preloader" id="preloader">
+		<article class="preloader__box">
+			<div class="preloader__box_item1"></div>
+			<div class="preloader__box_item2"></div>
+			<div class="preloader__box_item3"></div>
+		</article>
+	</article>
+	<article class="swipeBar" id="swipeBar"></article>
+	<article class="swipeMenu" id="swipeMenu">
+		<section class="swipeMenu__header">
+			<div class="header__RA">
+				//RA
+			</div>
+			<div class="header__buttons_lang">
+				En/Ru
+			</div>
+			<div class="swipeMenu__header_closeButton" id="swipeMenu__closeButton">			
+			</div>
+		</section>
+		<section class="swipeMenu__center">
+			<span class="swipeMenu__center_item" id="works__button3">Works</span>
+			<span class="swipeMenu__center_item" id="skills__button3">Skills</span>
+			<span class="swipeMenu__center_item" id="repository__button3">Git Repository</span>
+		</section>
+		<section class="swipeMenu__contact">
+			<span class="swipeMenu__contact_title">
+				Contact
+			</span>
+			<span class="swipeMenu__contact_item">
+				Yahevin15@gmail.com
+			</span>
+			<span class="swipeMenu__contact_item">
+				+7 (917) 916-28-74
+			</span>
+		</section>
+		<nav class="swipeMenu__socNets">
+				<a href="https://vk.com/drunken_hunter" class="footer__socNets_item">
+					<div class="footer__socNets_vk"></div>
+				</a>
+				<a href="https://github.com/Yahevin" class="footer__socNets_item">
+					<div class="footer__socNets_gitHub"></div>
+				</a>
+				<a href="" class="footer__socNets_item">
+					<div class="footer__socNets_in"></div>
+				</a>
+			</nav>
+	</article>
 	<section class="sideMenu">
 		<div class="sideMenu__pageBlock" id="sideMenu__page"> 
 			<span class="sideMenu__pageBlock_number" id="sideMenu__pageBlock">1 </span>
 			 of 
 			<span class="sideMenu__pageBlock_number"> 4</span> 
-		</div>
-			
+		</div>			
 		<div class="sideMenu__burger" id="sideMenu__burger">
 			<div class='sideMenu__burger_snippet snippet1' id='sideMenu__burger_snippet1'></div>
 			<div class='sideMenu__burger_snippet snippet2' id='sideMenu__burger_snippet2'></div>
 			<div class='sideMenu__burger_snippet snippet3' id='sideMenu__burger_snippet3'></div>
 		</div>
 		<section class="sideMenu__sideBar" id="sideMenu__sideBar">
+			<article class="sideMenu__sideBar_title">Site Navigation</article>
+			<article class="sideMenu__sideBar_about-item sideMenu__sideBar_item" id="about__button2">
+				<div class="sideMenu__sideBar_about-img"></div>				
+			</article>
+			<article class="sideMenu__sideBar_works-item sideMenu__sideBar_item" id="works__button4">
+				<div class="sideMenu__sideBar_works-img"></div>				
+			</article>
+			<article class="sideMenu__sideBar_skills-item sideMenu__sideBar_item"
+			id="skills__button4">
+				<div class="sideMenu__sideBar_skills-img"></div>				
+			</article>
+			<article class="sideMenu__sideBar_git-item sideMenu__sideBar_item" id="repository__button4">
+				<div class="sideMenu__sideBar_git-img"></div>				
+			</article>
+			<article class="sideMenu__sideBar_contact-item sideMenu__sideBar_item" id="contact__button">
+				<div class="sideMenu__sideBar_contact-img"></div>				
+			</article>
 		</section>
 	</section>
 	<section class="content">
@@ -50,6 +110,7 @@
 					En/Ru
 				</div>
 			</article>
+			<article class="header__swipeButton" id="header__swipeButton"></article>
 		</header>
 		<article class="myInfo">
 			<div class="myInfo__mainBox">
@@ -182,7 +243,13 @@
 				</section>
 			</section>
 			<section class="repository__box">
-				<article class="repository__box_preloader"></article>
+				<article class="preloader" id="preloader2">
+					<article class="preloader__box-2">
+						<div class="preloader__box_item1"></div>
+						<div class="preloader__box_item2"></div>
+						<div class="preloader__box_item3"></div>
+					</article>
+				</article>
 				<article class="repository__box_item" id="repository__box_item"></article>
 				<nav class="repository__box_nav" id="repository__box_nav">
 				</nav>
@@ -203,7 +270,7 @@
 			</a>
 		</article>
 	</section>
-	<footer class="footer">
+	<footer class="footer" id="footer">
 		<section class="footer__me">
 			<span class="footer__me_title">
 				Ramazan Abdullin
@@ -253,19 +320,19 @@
 			</nav>
 		</section>				
 	</footer>
-	<script type="text/javascript" src="scrypt.js"></script>
-	<script type="text/javascript" src="octokit-rest.min.js"></script>
-	<script src="slideout.min.js"></script>
-<script>
-  var slideout = new Slideout({
-    'panel': document.getElementById('panel'),
-    'menu': document.getElementById('menu'),
-    // 'side': 'right'
-  });
-
-  document.querySelector('.toggle-button').addEventListener('click', function() {
-    slideout.toggle();
-  });
-</script>
+	<script type="text/javascript" src="js/index.min.js"></script>
+	<script type="text/javascript">
+		var myElement = document.getElementById('swipeBar');
+		var myOptions = {
+		    event: 'swipe',
+		    pointers: 1,
+		    velocity: 0.3,
+		    threshold: 20
+		}
+		var hammertime = new Hammer(myElement, myOptions);
+		hammertime.on('swipe', function (ev) {
+			sideMenu.viewSwipeMenu(ev.direction)
+		});
+	</script>
 </body>
 </html>

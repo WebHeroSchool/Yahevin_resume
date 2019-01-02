@@ -8,8 +8,10 @@ const autoprefixer = require('autoprefixer');
 const octokit = require('@octokit/rest')()
 const nested = require('postcss-nested');
 const assets = require('postcss-assets');
+const cssnano = require('gulp-cssnano');
+var uglify = require('gulp-uglify-es').default;
 const rename = require('gulp-rename');
-const glob = require("glob");
+const glob = require('glob');
 
 
 
@@ -18,14 +20,20 @@ const path = {
 	src: {
 		dir: 'src',
 		script: 'src/*.js',
-		style: 'src/*.css'
+		style: 'src/*.css',
+		images: 'src/imgs/*',
+		fonts: 'src/fonts/*'
 	},
 	buildFolder: {
 		dir: 'build',
 		script: 'build/js',
-		style: 'src/build/css',
-		images: 'build/images',
+		style: 'build/css',
+		images: 'build/imgs',
 		fonts: 'build/fonts'
+	},
+	buildName: {
+		script: 'index.min.js',
+		style: 'index.min.css'
 	}
 }
 
@@ -45,19 +53,29 @@ gulp.task('buildCss', () => {
 	return gulp.src([path.src.style])
 		.pipe(postcss(processors))
 		.pipe(postcss(plugins))
+		.pipe(concat(path.buildName.style))
+		.pipe(cssnano())
 		.pipe(gulp.dest(path.buildFolder.style));
 });
 gulp.task('buildJs', () => {
 	return gulp.src([path.src.script])
 	    .pipe(concat(path.buildName.script))
+	    .pipe(uglify())
 		.pipe(gulp.dest(path.buildFolder.script))
 });
-
+gulp.task('buildImgs', () => {
+	return gulp.src([path.src.images])
+		.pipe(gulp.dest(path.buildFolder.images))
+});
+gulp.task('buildFonts', () => {
+	return gulp.src([path.src.fonts])
+		.pipe(gulp.dest(path.buildFolder.fonts))
+});
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./src"
+            baseDir: "./build"
         }
     });
 	gulp.watch(path.src.style, ['buildCss-watch']);
@@ -66,3 +84,4 @@ gulp.task('browser-sync', function() {
 
 gulp.task('buildCss-watch', ['buildCss'], () => browserSync.reload());
 gulp.task('dev', ['buildCss','browser-sync']);
+gulp.task('prod', ['buildCss','buildJs','buildImgs','buildFonts']);

@@ -5,6 +5,149 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
+.preloader {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background-color: white;
+	&-off {
+		z-index: -1000;
+	}
+	&__box {
+		position: absolute;
+		width: 70px;
+		height: 70px;
+		top: 40vh;
+		right: 45%;
+		animation: spin 2.5s ease-out infinite;
+		&-2 {
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			top: 0;
+			right: 45%;
+			animation: spin 2.5s ease-out infinite;
+		}
+		&_item1 {
+			background-image: url('../imgs/Ellipse-blue.svg');
+			background-size: cover;
+			width: 32px;
+			height: 70px;
+			position: absolute;
+			left: 0;
+		}
+		&_item2 {
+			background-image: url('../imgs/Ellipse-yellow.svg');
+			background-size: cover;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		&_item3 {
+			background-image: url('../imgs/Ellipse-azure.svg');
+			background-size: cover;
+			repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(720deg); 
+    }
+}
+.swipeBar {
+	position: absolute;
+	width: 80px;
+	height: 99%;
+	bottom: 0;
+	right: 0;
+	z-index: 4;
+	@media (min-width: 1081px) {
+		display: none;
+	}
+}
+.swipeMenu {
+	z-index: 3;
+	position: fixed;
+	padding: 0 7.5vw 0 7.5vw;
+	right: -100vw;
+	top: 0;
+	height: 100vh;
+	display: none;
+	width: 85%;
+	margin: 0 auto;
+	font-family: MontserratSemiBold;
+	font-size: 20px;
+	color: #0094FF;
+	&__open {
+		overflow-y: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: white;
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&_closeButton {
+			background-image: url('../imgs/Vector.png');
+			background-size: cover;
+			repeat: no-repeat;
+			width: 27px;
+			height: 27px;
+			margin-left: 20px;
+		}
+	}
+	&__center {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 25vh;
+		margin: 6vh 0;
+		&_item {
+			text-align: center;
+
+		}
+	}
+	&__contact {
+		display: block;
+		margin: 0 auto;
+		&_title {
+			text-align: center;
+			display: block;
+			
+		}
+		&_item {
+			text-align: center;
+			display: block;
+			color: #ADADB9;
+			font-family: MontserratMedium;
+		}
+	}
+	&__socNets {
+		display: flex;
+		justify-content: space-between;
+		width: 280px;
+		margin: 0 auto;
+	}
+	@media (min-width: 1081px) {
+		display: none;
+	}
+}
+
+
 .sideMenu {
 	position: sticky;
 	top: 20px;
@@ -52,9 +195,104 @@ body {
 		top: 0;
 		right: -280px;
 		width: 280px;
-		height: 1000px;
-		opacity: 0.1;
-		background-color: grey;
+		height: auto;
+		opacity: 0.85;
+		background-color: white;
+		&_item {
+			width: 280px;
+			height: auto;
+			background-color: white;
+			display: flex;
+ 			justify-content: center;
+ 			align-items: center;
+ 			background-color: white;
+ 			&:hover {
+ 				border: 0.5px solid #ADADB9;
+ 				width: 279px;
+ 			}
+		}
+		&_title {
+			color:white;
+			display: block;
+			font-family: MontserratSemiBold;
+			font-size: 25px;
+			background-color: #2F2F38;
+			text-align: center;
+			padding: 10px;
+			opacity: 0.95;
+		}
+		&_about {
+			&-img{
+				display: block;
+				background-image: url(../imgs/about.png);
+				width: 280px;
+				height: 157px;
+				background-size: cover;
+	   	 		background-repeat: no-repeat;
+   	 		}
+   	 		&-item {   	 			
+				width: 280px;
+				height: 160px;				
+			}
+		}
+		&_works {
+			&-img{
+				display: block;
+				background-image: url(../imgs/works.png);
+				width: 260px;
+				height: 110px;
+				background-size: cover;
+	   	 		background-repeat: no-repeat;
+   	 		}
+   	 		&-item {
+				width: 280px;
+				height: 120px;
+			}
+		}
+		&_skills {
+			&-img{
+				display: block;
+				background-image: url(../imgs/skills.png);
+				width: 215px;
+				height: 100px;
+				background-size: cover;
+	   	 		background-repeat: no-repeat;
+   	 		}
+   	 		&-item {
+				width: 280px;
+				height: 120px;
+			}
+		}
+		&_git {
+			&-img{
+				display: block;
+				background-image: url(../imgs/repos.png);
+				width: 200px;
+				height: 85px;
+				background-size: cover;
+	   	 		background-repeat: no-repeat;
+	   	 		margin-left: -15px;
+   	 		}
+   	 		&-item {
+				width: 280px;
+				height: 120px;
+			}
+		}
+		&_contact {
+			&-img{
+				display: block;
+				background-image: url(../imgs/contact.png);
+				width: 280px;
+				height: 100px;
+				background-size: cover;
+	   	 		background-repeat: no-repeat;
+   	 		}
+   	 		&-item {
+				width: 280px;
+				height: 120px;
+				background-color: #2F2F38;
+			}
+		}	
 	}
 	&__burger_snippet {
 		width: 25px;
@@ -65,7 +303,7 @@ body {
 		background-color: white;
 		transition: 0.5s ease 0s;
 	}
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 		display: none;
 	}
 }
@@ -115,14 +353,14 @@ body {
 	font-family: MontserratMedium;
 	height: 50px;
 	margin: 30px 0 70px 0;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 		margin: 30px 0 20px 0;
 	}
 	&__RA {
 		color: #83838E;
 		font-size: 1.8vw;
 		font-family: MontserratSemiBold;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 22px;
 		}
 	}
@@ -132,7 +370,7 @@ body {
 		justify-content: space-between;
 		font-size: 1vw;
 		color: #ADADB9;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 				display: none;
 			}
 		&_nav {
@@ -156,15 +394,33 @@ body {
 			}
 		}
 	}
+	&__swipeButton {
+		display: none;
+		@media (max-width: 1081px) {
+			display: block;
+			width: 38px;
+			border-bottom:  3px solid #ADADB9;
+			
+		}
+		&:before {
+			display: none;
+			@media (max-width: 1081px) {
+				display: block;
+				width: 38px;
+				border-bottom: 3px solid #ADADB9;
+				content: '';
+				margin-bottom: 3px;
+				
+			}
+		}
+	}
 }
 .content {
 	width: 65%;
 	min-width: 720px;
 	margin: 0 20vw 0 auto;
-	@media (max-width: 1100px) {
-		margin: 0 auto 0 62px;
-	}
-	@media (max-width: 800px) {
+	background-color: white;
+	@media (max-width: 1081px) {
 		margin: 0 7.5vw 0 7.5vw;
 		width: 85%;
 		min-width: 0px;
@@ -179,7 +435,7 @@ body {
 	font-family: MontserratRegular;
 	width: 100%;
 	margin: 0 0 170px 0;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 			margin: 0 0 80px 0;
 		}
 	&__hi {
@@ -187,7 +443,7 @@ body {
 		margin: 0 0 34px 0;
 		font-size: 1.9vw;
 		width: 84%;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 7vw;
 			width: 90%;
 			margin: 0 0 20px 0;
@@ -197,7 +453,7 @@ body {
 		display: block;
 		margin: 0 0 20px 0;
 		font-size: 1.4vw;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 5vw;
 			width: 90%;
 		}
@@ -215,20 +471,20 @@ body {
 		font-family: MontserratBold;
 		font-size: 4.5vw;
 		margin: 0 0 55px 0;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 8vw;
 			margin: 0 0 35px 0;
 		}
 		&_img {
 			display: inline-block;
-			background-image: url('I.png');
+			background-image: url('../imgs/I.png');
 			width: 13vw;
 			height: 13vw;
 			min-height: 200px;
 			min-width: 200px;
 			background-size: contain;
 			background-repeat: no-repeat;
-			@media (max-width: 800px) {
+			@media (max-width: 1081px) {
 				width: 28vw;
 				height: 28vw;
 				min-height: 120px;
@@ -256,7 +512,7 @@ body {
 .works {
 	margin: 0 0 229px 0;
 	width: 90%;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 			margin: 0 0 105px 0;
 			width: 100%;
 		}
@@ -269,7 +525,7 @@ body {
 			display: block;
 			font-family: MontserratSemiBold;
 			font-size: 1.8vw;
-			@media (max-width: 800px) {
+			@media (max-width: 1081px) {
 				font-size: 6vw;
 			}
 		}
@@ -277,7 +533,7 @@ body {
 			font-family: MontserratRegular;
 			font-size: 1vw;
 			color: #ADADB9;
-			@media (max-width: 800px) {
+			@media (max-width: 1081px) {
 				font-size: 6vw;
 			}
 		}
@@ -286,7 +542,7 @@ body {
 		max-height: 16vw;
 		min-height: 178px;
 		width: 100%;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			min-width: 0px;
 			max-height: 100vw;
 			min-height: 0px;
@@ -301,7 +557,7 @@ body {
 		max-height: 16vw;
 		min-height: 178px;
 		position: absolute;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			flex-direction: column;
 			width: 85%;
 			min-width: 0px;
@@ -310,9 +566,9 @@ body {
 		}
 		&_left {
 			display: inline-block;
-		    background-image: url(imgs/Tesla.png);
+		    background-image: url(../imgs/Tesla.png);
 		    transition: opacity 0.4s ease-out;
-		    @media (max-width: 800px) {
+		    @media (max-width: 1081px) {
 		    	margin: 0 0 30px 0;
 			}
 		    &:hover {
@@ -321,7 +577,7 @@ body {
 		}
 		&_right {
 			display: inline-block;
-		    background-image: url(imgs/Game.png);
+		    background-image: url(../imgs/Game.png);
 		    background-color: green;
 		    transition: opacity 0.4s ease-out;
 		    &:hover {
@@ -335,7 +591,7 @@ body {
 		justify-content: space-between;
 		max-height: 16vw;
 		min-height: 178px;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			flex-direction: column;
 			width: 100%;
 			min-width: 0px;
@@ -350,7 +606,7 @@ body {
 		}
 		&_left {
 		    background-color: red;
-		    @media (max-width: 800px) {
+		    @media (max-width: 1081px) {
 		    	margin: 0 0 30px 0;
 			}
 		}
@@ -362,12 +618,18 @@ body {
 			display: block;
 			font-family: MontserratSemiBold;
 			font-size: 1vw;
+			@media (max-width: 1081px) {
+		    	font-size: 4vw;
+			}
 		}
 		&_text {
 			margin: 25px 40px;
 			display: block;
 			font-family: MontserratRegular;
 			font-size: 1vw;
+			@media (max-width: 1081px) {
+		    	font-size: 2vw;
+			}
 
 		}
 	}
@@ -379,10 +641,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 0 11px -3px black;
-    @media (max-width: 800px) {
-		display: block;
+    @media (max-width: 1081px) {
+		display: flex;
 		width: 100%;
-		height: 45.5vw;
+		height: 46.5vw;
 		min-height: 0px;
 	}
 }
@@ -392,7 +654,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	height: auto;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 			display: block;
 			margin: 0 0 115px 0;
 		}
@@ -400,7 +662,7 @@ body {
 		display: inline-block;
 		position: relative;
 		width: 45%;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			display: block;
 			width: 100%;
 			margin: 0 0 30px 0;
@@ -409,7 +671,7 @@ body {
 	&__itemBox {
 		display: inline-block;
 		width: 45%;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			display: block;
 			width: 100%;
 		}
@@ -418,7 +680,7 @@ body {
 		display: block;
 		font-family: MontserratRegular;
 		font-size: 1.4vw;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 6vw;
 		}
 		&_title {
@@ -445,7 +707,7 @@ body {
 	width: 100%;
 	height: 120px;
 	font-family: MontserratRegular;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 			height: auto;
 		}
 	&_title {
@@ -453,14 +715,14 @@ body {
 		display: block;
 		font-family: MontserratSemiBold;
 		font-size: 1.8vw;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 6vw;
 		}
 	}
 	&_text {
 		display: block;
 		font-size: 1.9vw;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			font-size: 6vw;
 		}
 	}
@@ -473,7 +735,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	height: auto;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 			display: block;
 			margin: 0 0 115px 0;
 		}
@@ -481,7 +743,7 @@ body {
 		display: inline-block;
 		position: relative;
 		width: 45%;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			display: block;
 			width: 100%;
 			margin: 0 0 40px 0;
@@ -491,7 +753,7 @@ body {
 		display: inline-block;
 		position: relative;
 		width: 45%;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			display: block;
 			width: 100%;
 		}
@@ -499,7 +761,7 @@ body {
 		&_item {
 			font-size: 1.4vw;
 			z-index: 2;
-			@media (max-width: 800px) {
+			@media (max-width: 1081px) {
 				font-size: 6vw;
 			}
 		}	
@@ -520,7 +782,7 @@ body {
 			font-size: 1.8vw;
 			width: 20%;
 			z-index: 2;
-			@media (max-width: 800px) {
+			@media (max-width: 1081px) {
 				font-size: 6vw;
 			}
 		}
@@ -537,7 +799,7 @@ body {
 	margin: 0 0 180px 0;
 	font-size: 1.8vw;
 	font-family: MontserratRegular;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 		margin: 0 0 80px 0;
 		width: 100%;
 		font-size: 6vw;
@@ -576,7 +838,7 @@ body {
 	background-color: #2F2F38;
 	font-family: MontserratRegular;
 	font-size: 23px;
-	@media (max-width: 800px) {
+	@media (max-width: 1081px) {
 			display: block;
 			width: 85%;
 			padding: 0 7.5vw 20px 7.5vw;
@@ -595,7 +857,7 @@ body {
 			display: block;
 			 color: #ADADB9;
 		}
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			display: block;
 			width: 100%;
 			margin: 0 0 30px 0;
@@ -608,7 +870,7 @@ body {
 		&_title {
 			margin: 0 0 28px 0;
 			display: block;
-			@media (max-width: 1030px) {
+			@media (max-width: 1081px) {
 				margin: 0 0 60px 0;
 			}
 		}
@@ -618,7 +880,7 @@ body {
 			margin: 0 0 8px 0;
 			cursor: pointer;
 		}
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 			display: none;
 		}
 	}
@@ -628,10 +890,7 @@ body {
 		&_title {
 			display: block;
 			margin: 0 0 28px 0;
-			@media (max-width: 1030px) {
-				margin: 0 0 60px 0;
-			}
-			@media (max-width: 800px) {
+			@media (max-width: 1081px) {
 				margin: 0 0 20px 0;
 			}
 		}
@@ -646,7 +905,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		width: 270px;
-		@media (max-width: 800px) {
+		@media (max-width: 1081px) {
 				margin: 20px 0 0 0;
 			}
 		&_item {
@@ -658,21 +917,21 @@ body {
 			background-color: #ADADB9;
 		}
 		&_vk {
-			background-image: url(imgs/vk.png);
+			background-image: url(../imgs/vk.png);
 			width: 37px;
 			height: 22px;
 			background-size: cover;
 	   	 	background-repeat: no-repeat;
 		}
 		&_gitHub {
-			background-image: url(imgs/git.png);
+			background-image: url(../imgs/git.png);
 			width: 27px;
 			height: 31px;
 			background-size: cover;
    	 		background-repeat: no-repeat;
 		}
 		&_in {
-			background-image: url(imgs/LinkedIn.png);
+			background-image: url(../imgs/LinkedIn.png);
 			width: 31px;
 			height: 29px;
 			background-size: cover;
