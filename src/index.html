@@ -30,7 +30,7 @@
 			<div class="header__RA">
 				//РА
 			</div>
-			<a href="https://yahevin.github.io/Resume/index-ru.html" class="header__buttons_lang"> 
+			<a href="https://yahevin.github.io/Resume/index-en.html" class="header__buttons_lang"> 
 				En/Ru
 			</a>
 			<div class="swipeMenu__header_closeButton" id="swipeMenu__closeButton">			
@@ -38,7 +38,7 @@
 		</section>
 		<section class="swipeMenu__center">
 			<span class="swipeMenu__center_item" id="works__button3">Работы</span>
-			<span class="swipeMenu__center_item" id="skills__button3">Навык</span>
+			<span class="swipeMenu__center_item" id="skills__button3">Навыки</span>
 			<span class="swipeMenu__center_item" id="repository__button3">Гит репозитории</span>
 		</section>
 		<section class="swipeMenu__contact">
@@ -133,13 +133,13 @@
 				Я владею адаптивной версткой и пишу на нативном JavaScript.
 			</span>	
 			<span class="myInfo__text">
-				Есть проект, который Вы хотели бы обсудить 
+				Есть проект, который Вы хотели бы обсудить?
 			</span>
 			<span class="myInfo__text">
 				Пишите <span class="myInfo__blueText">Yahevin15@gmail.com</span>
 			</span>
 			<span class="myInfo__text">
-				или звоните мне <span class="myInfo__blueText">+7 (917) 916-28-74</span>
+				или звоните мне <span class="myInfo__blueText"><br>+7 (917) 916-28-74</span>
 			</span>			
 			<div class="myInfo__triangle">			
 			</div>
@@ -318,19 +318,6 @@
 			</nav>
 		</section>				
 	</footer>
-	<script type="text/javascript" src="js/index.min.js"></script>
-	<script type="text/javascript">
-		var myElement = document.getElementById('swipeBar');
-		var myOptions = {
-		    event: 'swipe',
-		    pointers: 1,
-		    velocity: 0.3,
-		    threshold: 20
-		}
-		var hammertime = new Hammer(myElement, myOptions);
-		hammertime.on('swipe', function (ev) {
-			sideMenu.viewSwipeMenu(ev.direction)
-		});
-	</script>
+	<script type="text/javascript" src="js/index.min.js"></script>	
 </body>
 </html>

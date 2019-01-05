@@ -1,0 +1,125 @@
+.works {
+	margin: 0 0 229px 0;
+	width: 90%;
+	@media (max-width: 1081px) {
+			margin: 0 0 105px 0;
+			width: 100%;
+		}
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 0 30px 0;
+		&_left {
+			color: #0094FF;
+			display: block;
+			font-family: MontserratSemiBold;
+			font-size: 1.8vw;
+			@media (max-width: 1081px) {
+				font-size: 6vw;
+			}
+		}
+		&_right {
+			font-family: MontserratRegular;
+			font-size: 1vw;
+			color: #ADADB9;
+			@media (max-width: 1081px) {
+				font-size: 6vw;
+			}
+		}
+	}
+	&__imgBox {
+		max-height: 16vw;
+		min-height: 178px;
+		width: 100%;
+		@media (max-width: 1081px) {
+			min-width: 0px;
+			max-height: 100vw;
+			min-height: 0px;
+		}
+	}
+	&__img {
+		width: 58.5%;
+		min-width: 648px;
+		z-index: 2;
+		display: flex;
+		justify-content: space-between;
+		max-height: 16vw;
+		min-height: 178px;
+		position: absolute;
+		@media (max-width: 1081px) {
+			flex-direction: column;
+			width: 85%;
+			min-width: 0px;
+			max-height: 100vw;
+			min-height: 0px;
+		}
+		&_left {
+			display: inline-block;
+		    background-image: url(../imgs/Tesla.webp);
+		    transition: opacity 0.4s ease-out;
+		    @media (max-width: 1081px) {
+		    	margin: 0 0 30px 0;
+			}
+		    &:hover {
+		    	opacity: 0;
+		    }   
+		}
+		&_right {
+			display: inline-block;
+		    background-image: url(../imgs/Game.webp);
+		    background-color: green;
+		    transition: opacity 0.4s ease-out;
+		    &:hover {
+		    	opacity: 0;
+		    } 
+		}
+	}
+	&__landing {
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		max-height: 16vw;
+		min-height: 178px;
+		@media (max-width: 1081px) {
+			flex-direction: column;
+			width: 100%;
+			min-width: 0px;
+			max-height: 100vw;
+			min-height: 0px;
+		}
+		&_item {
+			display: inline-flex;
+			justify-content: space-between;
+			flex-direction: column;
+			color: white;
+		}
+		&_left {
+		    background-color: red;
+		    @media (max-width: 1081px) {
+		    	margin: 0 0 30px 0;
+			}
+		}
+		&_right {
+		    background-color: green;   
+		}
+		&_tittle {
+			margin: 25px 40px;
+			display: block;
+			font-family: MontserratSemiBold;
+			font-size: 1vw;
+			@media (max-width: 1081px) {
+		    	font-size: 4vw;
+			}
+		}
+		&_text {
+			margin: 25px 40px;
+			display: block;
+			font-family: MontserratRegular;
+			font-size: 1vw;
+			@media (max-width: 1081px) {
+		    	font-size: 2vw;
+			}
+
+		}
+	}
+}

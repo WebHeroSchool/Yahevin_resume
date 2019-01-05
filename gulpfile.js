@@ -19,8 +19,8 @@ const glob = require('glob');
 const path = {
 	src: {
 		dir: 'src/*.html',
-		script: 'src/*.js',
-		style: 'src/*.css',
+		script: 'src/scripts/*.js',
+		style: 'src/styles/*.css',
 		images: 'src/imgs/*',
 		fonts: 'src/fonts/*'
 	},
@@ -86,5 +86,5 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('buildCss-watch', ['buildCss'], () => browserSync.reload());
-gulp.task('dev', ['buildCss','browser-sync']);
+gulp.task('dev', ['buildCss','buildHtml','buildJs','browser-sync']);
 gulp.task('prod', ['buildCss','buildJs','buildImgs','buildFonts','buildHtml']);

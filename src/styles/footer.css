@@ -1,0 +1,110 @@
+.footer {
+	padding: 130px 0 60px 0;
+	margin: 180px 0 0 0;
+	display: flex;
+	justify-content: space-around;
+	background-color: #2F2F38;
+	font-family: MontserratRegular;
+	font-size: 20px;
+	@media (max-width: 1081px) {
+			display: block;
+			width: 85%;
+			padding: 0 7.5vw 20px 7.5vw;
+			margin: 80px 0 0 0;
+			height: inherit;
+		}
+	&__me {
+		width: 30%;
+		&_title {
+			font-size: 33px;
+			display: block;
+			color: #DFDFE6;
+			margin: 0 0 12.5px 0;
+		}
+		&_text {
+			display: block;
+			 color: #ADADB9;
+		}
+		@media (max-width: 1081px) {
+			display: block;
+			width: 100%;
+			margin: 0 0 30px 0;
+			padding: 40px 0 0 0;
+		}
+	}
+	&__menu {
+		display: block;
+		color: #DFDFE6;
+		&_title {
+			margin: 0 0 28px 0;
+			display: block;
+			@media (max-width: 1081px) {
+				margin: 0 0 60px 0;
+			}
+		}
+		&_item {
+			display: block;
+			color: #ADADB9;
+			margin: 0 0 8px 0;
+			cursor: pointer;
+		}
+		@media (max-width: 1081px) {
+			display: none;
+		}
+	}
+	&__contact {
+		display: block;
+		color: #DFDFE6;
+		&_title {
+			display: block;
+			margin: 0 0 28px 0;
+			@media (max-width: 1081px) {
+				margin: 0 0 20px 0;
+			}
+		}
+		&_item {
+			display: block;
+			margin: 0 0 8px 0;
+
+		}
+
+	}
+	&__socNets {
+		display: flex;
+		justify-content: space-between;
+		width: 270px;
+		@media (max-width: 1081px) {
+				margin: 20px 0 0 0;
+			}
+		&_item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 68px;
+			height: 68px;
+			background-color: #ADADB9;
+		}
+		&_vk {
+			background-image: url(../imgs/vk.png);
+			width: 37px;
+			height: 22px;
+			background-size: cover;
+	   	 	background-repeat: no-repeat;
+		}
+		&_gitHub {
+			background-image: url(../imgs/git.png);
+			width: 27px;
+			height: 31px;
+			background-size: cover;
+   	 		background-repeat: no-repeat;
+		}
+		&_in {
+			background-image: url(../imgs/LinkedIn.png);
+			width: 31px;
+			height: 29px;
+			background-size: cover;
+   	 		background-repeat: no-repeat;
+		}
+
+	}
+}

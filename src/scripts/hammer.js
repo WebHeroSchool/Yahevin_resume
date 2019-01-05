@@ -2640,3 +2640,17 @@ if (typeof define === 'function' && define.amd) {
 }
 
 })(window, document, 'Hammer');
+
+
+
+var myElement = document.getElementById('swipeBar');
+var myOptions = {
+    event: 'swipe',
+    pointers: 1,
+    velocity: 0.3,
+    threshold: 20
+}
+var hammertime = new Hammer(myElement, myOptions);
+hammertime.on('swipe', function (ev) {
+    sideMenu.viewSwipeMenu(ev.direction)
+});
