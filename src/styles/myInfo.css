@@ -20,6 +20,11 @@
 		display: block;
 		margin: 0 0 20px 0;
 		font-size: 1.4vw;
+		color: black;
+		text-decoration: none;
+		&:visited {
+			color: black;
+		}			
 		@media (max-width: 1081px) {
 			font-size: 5vw;
 			width: 90%;
@@ -42,10 +47,9 @@
 		}
 		&_img {
 			display: inline-block;
-			background-image: url('../imgs/I.webp');
 			width: 13vw;
-			height: 13vw;
-			min-height: 200px;
+			height: 13.5vw;
+			min-height: 210px;
 			min-width: 200px;
 			background-size: contain;
 			background-repeat: no-repeat;

@@ -14,6 +14,8 @@
 
 	<title>WebHero2018</title>
 	<link rel="stylesheet" href="css/index.min.css">
+	<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -114,8 +116,11 @@
 		</header>
 		<article class="myInfo">
 			<div class="myInfo__mainBox">
-				<div class="myInfo__mainBox_img">					
-				</div>
+				<picture class="myInfo__mainBox_img">
+					<source srcset="imgs/I.webp" type="image/webp">
+					<source srcset="imgs/I.jpg" type="image/jpeg">
+					<img src="imgs/I.jpg" alt="Моя фотография" class="myInfo__mainBox_img">
+				</picture>
 				<div class="myInfo__mainBox_text">	
 					<span class="myInfo__mainBox_name">
 						Рамазан
@@ -126,7 +131,7 @@
 				</div>
 			</div>
 			<span class="myInfo__hi">
-				Привет, я <span class="myInfo__blueText_underlineFree">джуниор фронтэнд-разработчик</span> из Казани<br>
+				Привет, я <span class="myInfo__blueText_underlineFree">джуниор фронтенд-разработчик</span> из Казани<br>
 				Я с радостью возьмусь за новый проект.
 			</span>
 			<span class="myInfo__text">
@@ -135,14 +140,12 @@
 			<span class="myInfo__text">
 				Есть проект, который Вы хотели бы обсудить?
 			</span>
-			<span class="myInfo__text">
+			<a href="mailto:Yahevin15@gmail.com" target="_blank" class="myInfo__text">
 				Пишите <span class="myInfo__blueText">Yahevin15@gmail.com</span>
-			</span>
-			<span class="myInfo__text">
+			</a>
+			<a href="tel:89179162874" target="_blank" class="myInfo__text">
 				или звоните мне <span class="myInfo__blueText"><br>+7 (917) 916-28-74</span>
-			</span>			
-			<div class="myInfo__triangle">			
-			</div>
+			</a>			
 		</article>
 		<article class="works" id="works">
 			<section class="works__title">
@@ -155,8 +158,20 @@
 			</section>
 			<article class="works__imgBox">
 				<section class="works__img">
-					<div class="works__img_left recentImg"></div>
-					<div class="works__img_right recentImg"></div>
+					<a href="https://yahevin.github.io/Tesla/" target="_blank" class="recentImg">
+						<picture>
+							<source srcset="imgs/Tesla.webp" type="image/webp">
+							<source srcset="imgs/Tesla.jpg" type="image/jpeg">
+							<img src="imgs/Tesla.jpg" alt="Tesla Model S" class="works__img_item">
+						</picture>
+					</a>
+					<a href="https://yahevin.github.io/game/" target="_blank" class="recentImg">
+						<picture>
+							<source srcset="imgs/Game.webp" type="image/webp">
+							<source srcset="imgs/Game.jpg" type="image/jpeg">
+							<img src="imgs/Game.jpg" alt="Игра 'поймай мышь'" class="works__img_item">
+						</picture>
+					</a>
 				</section>
 				<section class="works__landing">
 					<div class="works__landing_left recentImg works__landing_item">
@@ -207,21 +222,21 @@
 					</span>
 				</section><section class="skills__item">
 					<span class="skills__item_title">
-						<span class="skills__item_number">02</span> CSS 
+						<span class="skills__item_number">03</span> CSS 
 					</span>
 					<span class="skills__item_text">
 						Современный пользователь хотел бы видеть адекватную картинку, просматривая страницу с любого устройства. Я освоил адаптивную верстку, чтобы уметь оптимизировать размер страницы под любое разрешение монитора. 
 					</span>
 				</section><section class="skills__item">
 					<span class="skills__item_title">
-						<span class="skills__item_number">03</span> JavaScript
+						<span class="skills__item_number">04</span> JavaScript
 					</span>
 					<span class="skills__item_text">
 						Я владею навыком работы с ES2015. Наиболее подходящий язык программирования для фронтэнд разработки.
 					</span>
 				</section><section class="skills__item">
 					<span class="skills__item_title">
-						<span class="skills__item_number">04</span> Препроцессоры
+						<span class="skills__item_number">05</span> Препроцессоры
 					</span>
 					<span class="skills__item1_text">
 						Препроцессоры и сборщики проекта здорого ускоряют разработку. В своих работах я использую gulp и ряд пакетов PostCSS.
@@ -263,7 +278,7 @@
 			<span class="hire__text2">
 				Я работаю с JavaScript, но поиск новых языков или фреймворков не проблема.
 			</span>
-			<a href="" class="hire__mail">
+			<a href="mailto:Yahevin15@gmail.com" target="_blank" class="hire__mail">
 				Yahevin15@gmail.com
 			</a>
 		</article>
