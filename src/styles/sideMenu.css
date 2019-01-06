@@ -158,7 +158,6 @@
 		&_about {
 			&-img{
 				display: block;
-				background-image: url(../imgs/about.png);
 				width: 280px;
 				height: 157px;
 				background-size: cover;
@@ -172,7 +171,6 @@
 		&_works {
 			&-img{
 				display: block;
-				background-image: url(../imgs/works.png);
 				width: 260px;
 				height: 110px;
 				background-size: cover;
@@ -186,7 +184,6 @@
 		&_skills {
 			&-img{
 				display: block;
-				background-image: url(../imgs/skills.png);
 				width: 215px;
 				height: 100px;
 				background-size: cover;
@@ -200,7 +197,6 @@
 		&_git {
 			&-img{
 				display: block;
-				background-image: url(../imgs/repos.png);
 				width: 200px;
 				height: 85px;
 				background-size: cover;
@@ -215,7 +211,6 @@
 		&_contact {
 			&-img{
 				display: block;
-				background-image: url(../imgs/contact.png);
 				width: 280px;
 				height: 100px;
 				background-size: cover;
