@@ -15,7 +15,7 @@
 	padding: 0 7.5vw 0 7.5vw;
 	right: -100vw;
 	top: 0;
-	height: 100vh;
+	height: 100%;
 	display: none;
 	width: 85%;
 	margin: 0 auto;
@@ -47,8 +47,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		height: 25vh;
-		margin: 6vh 0;
+		height: 25%;
+		margin: 6% 0;
 		&_item {
 			cursor: pointer;
 			text-align: center;
