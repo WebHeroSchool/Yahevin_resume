@@ -30,6 +30,7 @@ var sideMenuFunc = function () {
 	    swipeBar: document.getElementById('swipeBar'),
 	    closeButton: document.getElementById('swipeMenu__closeButton'),
 	    openButton: document.getElementById('header__swipeButton'),
+	    sideMenuHideButton: document.getElementById('sideMenuHideButton'),
 	    tapChek: 0,
 	      
 
@@ -68,6 +69,7 @@ var sideMenuFunc = function () {
 	        this.repository.onclick = this.scrollToRepository; 
 	        this.about.onclick = this.scrollToTop; 
 	        this.burger.onclick = this.viewSideBar;
+	        this.sideMenuHideButton.onclick = this.viewSideBar;
 
 	        this.closeButton.onclick = function () {          
 	            sideMenu.viewSwipeMenu (4);
@@ -131,6 +133,8 @@ var sideMenuFunc = function () {
 	            if (SBR == '') {SBR = '-280px'};
 	            if (BR == '') {BR = '20px'};
 	            if (PB == '') {PB = '138px'};
+	            sideMenu.sideMenuHideButton.classList.remove('sideMenuHideButton-off')
+	            sideMenu.sideMenuHideButton.classList.add('sideMenuHideButton-on');
 	            (function open () {  
 	                PB = PB.slice(0,PB.lastIndexOf('p'));
 	                BR = BR.slice(0,BR.lastIndexOf('p'));
@@ -154,6 +158,8 @@ var sideMenuFunc = function () {
 	        }
 	        else {
 	            sideMenu.tapChek = 0;
+	            sideMenu.sideMenuHideButton.classList.add('sideMenuHideButton-off')
+	            sideMenu.sideMenuHideButton.classList.remove('sideMenuHideButton-on');
 	            (function close () { 
 	                PB = PB.slice(0,PB.lastIndexOf('p')); 
 	                BR = BR.slice(0,BR.lastIndexOf('p'));
@@ -282,12 +288,9 @@ var sideMenuFunc = function () {
 	            }   
 	        }
 	        return go ();
-	    },
-	    
+	    },	    	
 	}
 	return sideMenu.makeButtons ()
-		
-	
 }
 
 sideMenuFunc ();

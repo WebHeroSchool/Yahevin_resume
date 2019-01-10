@@ -47,6 +47,7 @@
 		}
 		&_img {
 			display: inline-block;
+			margin: 0 45px 0 0;
 			width: 13vw;
 			height: 13.5vw;
 			min-height: 210px;
@@ -54,6 +55,7 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			@media (max-width: 1081px) {
+				margin: 0 20px 0 0;
 				width: 28vw;
 				height: 28vw;
 				min-height: 120px;

@@ -10,6 +10,7 @@
 	&__tittle {
 		color: #0094FF;
 		display: block;
+		font-family: MontserratSemiBold;
 	}
 	&__text1 {
 		margin: 16px 0 0 0;

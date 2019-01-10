@@ -8,11 +8,11 @@
   		content="Привет,я джуниор фронтенд-разработчик из Казани.
   		Я с радостью возьмусь за новый проект." />
 	<meta property="og:url" content="https://yahevin.github.io/Resume" />
-	<meta property="og:image" content="https://yahevin.github.io/Resume/imgs/I.png" />
-	<meta property="og:image:width" content="1200"/>
-	<meta property="og:image:height" content="630"/>
+	<meta property="og:image" content="https://yahevin.github.io/Resume/imgs/title.png" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="300" />
 
-	<title>WebHero2018</title>
+	<title>Junior-frontend developer</title>
 	<link rel="stylesheet" href="css/index.min.css">
 	<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
@@ -66,6 +66,7 @@
 				</a>
 			</nav>
 	</article>
+	<article class="sideMenuHideButton-off" id="sideMenuHideButton"></article>
 	<section class="sideMenu">
 		<div class="sideMenu__pageBlock" id="sideMenu__page"> 
 			<span class="sideMenu__pageBlock_number" id="sideMenu__pageBlock">1 </span>
@@ -80,19 +81,23 @@
 		<section class="sideMenu__sideBar" id="sideMenu__sideBar">
 			<article class="sideMenu__sideBar_title">Карта сайта</article>
 			<article class="sideMenu__sideBar_about-item sideMenu__sideBar_item" id="about__button2">
-				<img src="imgs/about-ru.png" class="sideMenu__sideBar_about-img">				
+				<div class="sideMenu__sideBar_about-img sideMenu__sideBar_about-img-ru">					
+				</div>
 			</article>
-			<article class="sideMenu__sideBar_works-item sideMenu__sideBar_item" id="works__button4">	
-				<img src="imgs/works-ru.png" class="sideMenu__sideBar_works-img">			
+			<article class="sideMenu__sideBar_works-item sideMenu__sideBar_item" id="works__button4">
+				<div class="sideMenu__sideBar_works-img sideMenu__sideBar_works-img-ru">						
 			</article>
 			<article class="sideMenu__sideBar_skills-item sideMenu__sideBar_item" id="skills__button4">
-				<img src="imgs/skills-ru.png" class="sideMenu__sideBar_skills-img">				
+				<div class="sideMenu__sideBar_skills-img sideMenu__sideBar_skills-img-ru">					
+				</div>
 			</article>
 			<article class="sideMenu__sideBar_git-item sideMenu__sideBar_item" id="repository__button4">
-				<img src="imgs/repo-ru.png" class="sideMenu__sideBar_git-img">			
+				<div class="sideMenu__sideBar_git-img sideMenu__sideBar_git-img-ru">
+				</div>		
 			</article>
-			<article class="sideMenu__sideBar_contact-item sideMenu__sideBar_item" id="contact__button">
-				<img src="imgs/contact-ru.png" class="sideMenu__sideBar_contact-img">			
+			<article class="sideMenu__sideBar_contact-item sideMenu__sideBar_item" id="contact__button">		
+				<div class="sideMenu__sideBar_contact-img sideMenu__sideBar_contact-img-ru">			
+				</div>
 			</article>
 		</section>
 	</section>
@@ -250,7 +255,7 @@
 						Гит репозитории
 					</span>
 					<span class="sticky_text">
-						Здесь список моих репозиториев (пустые репозитории добавлены для демонстрации работы с Git API и пагинации списка)
+						Здесь список Гит репозиториев с моими проектами.
 					</span>
 				</section>
 			</section>
@@ -262,7 +267,7 @@
 						<div class="preloader__box_item3"></div>
 					</article>
 				</article>
-				<article class="repository__box_item" id="repository__box_item"></article>
+				<article class="repository__box_list" id="repository__box_list"></article>
 				<nav class="repository__box_nav" id="repository__box_nav">
 				</nav>
 			</section>

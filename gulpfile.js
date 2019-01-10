@@ -60,7 +60,7 @@ gulp.task('buildCss', () => {
 gulp.task('buildJs', () => {
 	return gulp.src([path.src.script])
 	    .pipe(concat(path.buildName.script))
-	    // .pipe(uglify())
+	    .pipe(uglify())
 		.pipe(gulp.dest(path.buildFolder.script))
 });
 gulp.task('buildImgs', () => {

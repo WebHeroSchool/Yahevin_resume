@@ -80,8 +80,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 68px;
-			height: 68px;
+			width: 55px;
+			height: 55px;
 			background-color: #ADADB9;
 		}
 		&_vk {
@@ -102,6 +102,7 @@
 			background-image: url(../imgs/LinkedIn.png);
 			width: 31px;
 			height: 29px;
+			margin-bottom: 3px;
 			background-size: cover;
    	 		background-repeat: no-repeat;
 		}
