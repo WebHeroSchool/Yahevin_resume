@@ -1,0 +1,50 @@
+.skills {	
+	margin: 0 0 207px 0;
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	@media (max-width: 1081px) {
+			display: block;
+			margin: 0 0 115px 0;
+		}
+	&__stickyBox {
+		display: inline-block;
+		position: relative;
+		width: 45%;
+		@media (max-width: 1081px) {
+			display: block;
+			width: 100%;
+			margin: 0 0 30px 0;
+		}
+	}
+	&__itemBox {
+		display: inline-block;
+		width: 45%;
+		@media (max-width: 1081px) {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__item {
+		display: block;
+		font-family: MontserratRegular;
+		font-size: 1.4vw;
+		@media (max-width: 1081px) {
+			font-size: 6vw;
+		}
+		&_title {
+			display: block;
+			margin: 0 0 15px 0;
+			color: #83838E;
+			font-family: MontserratSemiBold;
+		}
+		&_text {
+			display: block;
+			margin: 0 0 47px 0;
+
+		}
+		&_number {
+			color: #FFC700;
+		}
+	}
+}

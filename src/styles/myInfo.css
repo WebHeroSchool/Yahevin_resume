@@ -1,0 +1,80 @@
+.myInfo {
+	font-family: MontserratRegular;
+	width: 100%;
+	margin: 0 0 170px 0;
+	@media (max-width: 1081px) {
+			margin: 0 0 80px 0;
+		}
+	&__hi {
+		display: block;
+		margin: 0 0 34px 0;
+		font-size: 1.9vw;
+		width: 84%;
+		@media (max-width: 1081px) {
+			font-size: 6vw;
+			width: 90%;
+			margin: 0 0 20px 0;
+		}
+	}
+	&__text{
+		display: block;
+		margin: 0 0 20px 0;
+		font-size: 1.4vw;
+		color: black;
+		text-decoration: none;
+		&:visited {
+			color: black;
+		}			
+		@media (max-width: 1081px) {
+			font-size: 5vw;
+			width: 90%;
+		}
+	}
+	&__blueText {
+		color: #0094FF;
+		text-decoration: underline;
+		&_underlineFree {
+			color: #0094FF;
+		}
+	}
+	&__mainBox {
+		font-family: MontserratBold;
+		font-size: 4.5vw;
+		margin: 0 0 55px 0;
+		@media (max-width: 1081px) {
+			font-size: 8vw;
+			margin: 0 0 35px 0;
+		}
+		&_img {
+			display: inline-block;
+			margin: 0 45px 0 0;
+			width: 13vw;
+			height: 13.5vw;
+			min-height: 210px;
+			min-width: 200px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			@media (max-width: 1081px) {
+				margin: 0 20px 0 0;
+				width: 28vw;
+				height: 28vw;
+				min-height: 120px;
+				min-width: 120px;
+			}
+		}
+		&_text {
+			display: inline-block;
+		}
+		&_name {
+			display: block;
+			color: #83838E;
+		}
+		&_surname {
+			display: block;
+			color: #FFC700;
+		}
+		&_point {
+			color: #83838E;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+.repository {
+	margin: 0 0 200px 0;
+	display: flex;
+	justify-content: space-between;
+	height: auto;
+	@media (max-width: 1081px) {
+			display: block;
+			margin: 0 0 115px 0;
+		}
+	&__stickyBox {
+		display: inline-block;
+		position: relative;
+		width: 45%;
+		@media (max-width: 1081px) {
+			display: block;
+			width: 100%;
+			margin: 0 0 40px 0;
+		}
+	}
+	&__box {
+		display: inline-block;
+		position: relative;
+		width: 45%;
+		height: 400px;
+		@media (max-width: 1081px) {
+			display: block;
+			width: 100%;
+			height: 400px;
+		}
+
+		&_item {
+			color: #83838E;
+			margin: 0 0 25px 0;
+		}	
+		&_name {
+			cursor: pointer;
+			text-decoration: none;
+			display: block;			
+			font-family: MontserratSemiBold;
+			font-size: 1.4vw;
+			z-index: 2;
+			@media (max-width: 1081px) {
+				font-size: 4vw;
+			}
+		}	
+		&_description {
+			display: flex;
+			justify-content: space-between;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 1vw;
+			z-index: 2;
+			font-family: MontserratRegular;
+			@media (max-width: 1081px) {
+				font-size: 2.5vw;
+			}
+		}
+		&_icon {
+			background-size: contain;
+    		background-repeat: no-repeat;
+			width: 14px;
+			height: 14px;
+			display: inline-block;
+		}
+		&_empty {
+			background-image: url(../imgs/repository__box_empty.svg);			
+		}
+		&_fork {
+			background-image: url(../imgs/repository__box_fork.svg);
+		}
+		&_html {
+			background-image: url(../imgs/repository__box_html.svg);
+		}
+		&_css {
+			background-image: url(../imgs/repository__box_css.svg);
+		}
+		&_js {
+			background-image: url(../imgs/repository__box_js.svg);
+		}
+		&_star {
+			background-image: url(../imgs/repository__box_star.svg);
+		}
+
+		&_nav {
+			font-size: 1.8vw;
+			width: 20%;
+			z-index: 2;
+			@media (max-width: 1081px) {
+				font-size: 6vw;
+			}
+		}
+			&_button {
+				display: inline-block;
+				cursor: pointer;
+				font-family: MontserratRegular;
+				margin: 0 0 0 10px;
+				&-on {
+					color: #0094FF;
+				}
+			}
+	}
+}
